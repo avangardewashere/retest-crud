@@ -7,16 +7,16 @@ export default function EditTopicForm() {
     >
       <input
         type="text"
-        placeholder="Enter Topic Title"
+        placeholder="Update Topic Title"
         className="border border-slate-500 px-8 py-2"
       />
       <input
         type="text"
-        placeholder="Enter Topic Description"
+        placeholder="Update Topic Description"
         className="border border-slate-500 px-8 py-2"
       />
 
-      <button className="bg-green-300 w-fit p-3 rounded-md">Submit</button>
+      <button className="bg-green-300 w-fit p-3 rounded-md">Update Information</button>
     </form>
   );
 }
