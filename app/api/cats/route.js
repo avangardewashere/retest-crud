@@ -12,3 +12,18 @@ export async function POST(request) {
     { status: 201 }
   );
 }
+
+export async function GET() {
+    await connectMongoDB();
+    const cats = await Cat.find();
+    console.log(cats)
+    return NextResponse.json({cats})
+}
+
+export async function DELETE(request) {
+    const id = request.nextUrl.searchParams.get("id");
+    console.log(request);
+    await connectMongoDB();
+    await Cat.findByIdAndDelete(id);
+    return NextResponse.json({message:"Cat Deleted"},{state:200})
+}

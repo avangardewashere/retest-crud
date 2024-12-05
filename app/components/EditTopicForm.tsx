@@ -7,12 +7,17 @@ export default function EditTopicForm() {
     >
       <input
         type="text"
-        placeholder="Update Topic Title"
+        placeholder="Update Cat Name"
         className="border border-slate-500 px-8 py-2"
       />
       <input
         type="text"
-        placeholder="Update Topic Description"
+        placeholder="Update Cat Breed"
+        className="border border-slate-500 px-8 py-2"
+      />
+            <input
+        type="text"
+        placeholder="Update Cat Color"
         className="border border-slate-500 px-8 py-2"
       />
 
