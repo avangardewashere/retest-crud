@@ -12,3 +12,9 @@ export async function PUT(request,{params}){
     return NextResponse.json({message:"Cat Information Updated"});
 }
 
+export async function GET (request,{params}){
+    const {id}=params
+    await connectMongoDB();
+    const cat = await Cat.findOne({_id:id})
+    return NextResponse.json({cat},{status:200})
+}

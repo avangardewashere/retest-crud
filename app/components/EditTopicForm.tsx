@@ -1,4 +1,10 @@
-export default function EditTopicForm() {
+interface ETFProps {
+  id: string;
+}
+
+export default function EditTopicForm(props: ETFProps) {
+  const { id } = props;
+  console.log("inside form:", id);
   return (
     <form
       action="
@@ -15,13 +21,15 @@ export default function EditTopicForm() {
         placeholder="Update Cat Breed"
         className="border border-slate-500 px-8 py-2"
       />
-            <input
+      <input
         type="text"
         placeholder="Update Cat Color"
         className="border border-slate-500 px-8 py-2"
       />
 
-      <button className="bg-green-300 w-fit p-3 rounded-md">Update Information</button>
+      <button className="bg-green-300 w-fit p-3 rounded-md">
+        Update Information
+      </button>
     </form>
   );
 }
