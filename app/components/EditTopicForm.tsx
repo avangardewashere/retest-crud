@@ -1,9 +1,18 @@
+"use client"
+
+import {useState} from "react";
+
 interface ETFProps {
   id: string;
+  name:string;
+  breed:string;
+  color:string;
 }
 
 export default function EditTopicForm(props: ETFProps) {
   const { id } = props;
+    const [newName,setNewName] = useState()
+
   console.log("inside form:", id);
   return (
     <form

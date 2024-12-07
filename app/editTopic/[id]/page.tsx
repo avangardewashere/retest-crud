@@ -26,5 +26,5 @@ export default async function EditTopic({ params }: EditTopicParams) {
   const {cat} = await getTopicById(id);
   const {name,breed,color} = cat;
  
-  return <EditTopicForm id={id} />;
+  return <EditTopicForm id={id} name={name} breed={breed} color={color} />;
 }
